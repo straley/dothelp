@@ -1,0 +1,29 @@
+#!/bin/bash
+if [ "$DOTHELP" = "" ]; then
+  DOTHELP="$HOME"
+fi
+
+if [ "$1" = "help" ]; then
+  unset -f help
+  shift
+  help $@
+  $DOTHELP/.help.init
+else
+  ALTFILE="$DOTHELP/.help~$(echo $PWD | sed "s|$(echo $HOME)||" | sed "s#^/##" | sed "s#/#-#g")"
+  if [ -f "$PWD/.help-$1.txt" ]; then
+    $DOTHELP/.help.show "$PWD/.help-$1.txt"
+  elif [ -f "$ALTFILE-$1.txt" ]; then
+    $DOTHELP/.help.show "$ALTFILE-$1.txt"
+  elif [ -f "$DOTHELP/.help-$1.txt" ]; then
+    $DOTHELP/.help.show "$DOTHELP/.help-$1.txt"
+  elif [ -f "$PWD/.help.txt" ]; then
+    $DOTHELP/.help.show "$PWD/.help.txt"
+  elif [ -f "$ALTFILE.txt" ]; then
+    $DOTHELP/.help.show "$ALTFILE.txt"
+  elif [ -f "$DOTHELP/.help.txt" ]; then
+    $DOTHELP/.help.show "$DOTHELP/.help.txt"
+  else
+    echo "Warning: No ~/.help.txt exists."
+    echo "Use \"help help\" for system help."
+  fi
+fi

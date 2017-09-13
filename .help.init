@@ -1,0 +1,12 @@
+#!/bin/bash
+function help(){
+  if [ "$DOTHELP" = "" ]; then
+    DOTHELP="$HOME"
+  fi
+
+  if [ -x .help ]; then
+    ./.help "$@"
+  else
+    $DOTHELP/.help "$@"
+  fi
+}

@@ -1,0 +1,31 @@
+Welcome to [:bold:]dotHelp[:normal:].
+
+If you want to see the normal bash help, use:
+
+[:bold:]$ [:yellow:]help help [options][:reset:][:normal:]
+
+[:bold:]dotHelp[:normal:] will execute a [:yellow:].help[:reset:] bash script in  the current directory, if one exists.  If not, it'll try
+to display a [:yellow:].help.txt[:reset:] file from the current directory.  And, if that does not exist, then it'll just
+display this file.
+
+If you don't want to put your help files in a directory (perhaps it is a GitHub project), then you can put
+them in your home folder (or designated [:yellow:]$DOTHELP[:reset:] path) with the relative path to that directory, with slashes
+replaced with dashes, prepended with [:yellow:].help~[:reset:].
+
+For instance, if you had a folder at [:yellow:]~/Projects/backend/database/[:reset:], then the alternate help shell script would be:
+
+[:yellow:].help~Projects-backend-database[:reset:]
+
+Or the text file would be:
+
+[:yellow:].help~Projects-backend-database.txt[:reset:]
+
+If you want to add additional help files you can create files with a dash, like:
+[:yellow:].help-colors[:reset:] or [:yellow:].help-colors.txt[:reset:].  These will work like their undashed
+counterparts, but will be displayed with:
+
+[:bold:]$ [:yellow:]help colors[:reset:][:normal:]
+
+Try [:yellow:]help colors[:reset:] and learn about how to put colors in your help files.
+
+You can place your [:bold:]dotHelp[:normal:] files in your home directory or specify a [:yellow:]$DOTHELP[:reset:] path for them.

@@ -1,0 +1,25 @@
+#!/bin/bash
+cat $1 | \
+  sed "s/\[:bold:\]/$(echo -e "\033[1m")/g" | \
+  sed "s/\[:normal:\]/$(echo -e "\033[22m")/g" | \
+  sed "s/\[:black:\]/$(echo -e "\033[30m")/g" | \
+  sed "s/\[:red:\]/$(echo -e "\033[31m")/g" | \
+  sed "s/\[:green:\]/$(echo -e "\033[32m")/g" | \
+  sed "s/\[:yellow:\]/$(echo -e "\033[33m")/g" | \
+  sed "s/\[:blue:\]/$(echo -e "\033[34m")/g" | \
+  sed "s/\[:magenta:\]/$(echo -e "\033[35m")/g" | \
+  sed "s/\[:cyan:\]/$(echo -e "\033[36m")/g" | \
+  sed "s/\[:white:\]/$(echo -e "\033[37m")/g" | \
+  sed "s/\[:reset:\]/$(echo -e "\033[39m")/g" | \
+  sed "s/\[:BLACK:\]/$(echo -e "\033[40m")/g" | \
+  sed "s/\[:RED:\]/$(echo -e "\033[41m")/g" | \
+  sed "s/\[:GREEN:\]/$(echo -e "\033[42m")/g" | \
+  sed "s/\[:YELLOW:\]/$(echo -e "\033[43m")/g" | \
+  sed "s/\[:BLUE:\]/$(echo -e "\033[44m")/g" | \
+  sed "s/\[:MAGENTA:\]/$(echo -e "\033[45m")/g" | \
+  sed "s/\[:CYAN:\]/$(echo -e "\033[46m")/g" | \
+  sed "s/\[:WHITE:\]/$(echo -e "\033[47m")/g" | \
+  sed "s/\[:RESET:\]/$(echo -e "\033[49m")/g" | \
+  sed "s/[\\]\[:/[:/g" | \
+  sed "s/:[\\]\]/:]/g"; \
+  echo -e "\033[0m"

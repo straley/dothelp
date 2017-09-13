@@ -1,0 +1,28 @@
+[:bold:]dotHelp Colors[:normal:]
+
+To add colors and bolding to your [:bold:]dotHelp[:normal:] files, use any of the following codes:
+
+[:bold:]Bolding[:normal:]
+\[:bold:\] to make things [:bold:]bold[:normal:]
+\[:normal:\] to make things not bold
+
+[:bold:]Colors[:normal:]
+\[:black:\] to make the foreground text black ([:black:]sample[:reset:])
+\[:red:\] to make the foreground text red ([:red:]sample[:reset:])
+\[:green:\] to make the foreground text green ([:green:]sample[:reset:])
+\[:yellow:\] to make the foreground text yellow ([:yellow:]sample[:reset:])
+\[:blue:\] to make the foreground text blue ([:blue:]sample[:reset:])
+\[:magenta:\] to make the foreground text magenta ([:magenta:]sample[:reset:])
+\[:cyan:\] to make the foreground text cyan ([:cyan:]sample[:reset:])
+\[:white:\] to make the foreground text white ([:white:]sample[:reset:])
+\[:reset:\] to make the reset foreground text to the system default.
+
+\[:BLACK:\] to make the background text black ([:BLACK:]sample[:RESET:])
+\[:RED:\] to make the background text red ([:RED:]sample[:RESET:])
+\[:GREEN:\] to make the background text green ([:GREEN:]sample[:RESET:])
+\[:YELLOW:\] to make the background text yellow ([:YELLOW:]sample[:RESET:])
+\[:BLUE:\] to make the background text blue ([:BLUE:]sample[:RESET:])
+\[:MAGENTA:\] to make the background text magenta ([:MAGENTA:]sample[:RESET:])
+\[:CYAN:\] to make the background text cyan ([:CYAN:]sample[:RESET:])
+\[:WHITE:\] to make the background text white ([:BLACK:]sample[:RESET:])
+\[:RESET:\] to make the reset background text to the system default.
