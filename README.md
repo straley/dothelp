@@ -16,9 +16,7 @@ replaced with dashes, prepended with ``.help~``.
 
 For instance, if you had a folder at ``~/Projects/backend/database/``, then the alternate help shell script would be:
 
-```
-.help~Projects-backend-database
-```
+``.help~Projects-backend-database``
 
 Or the text file would be:
 
